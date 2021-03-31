@@ -1,15 +1,8 @@
-{
-  "name": "node-docker-ecs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+# Target Provider is AWS at region ap-southeast-1 (Singapore)
+provider "aws" {
+  region  = "ap-southeast-1"
+}
+# ECR
+resource "aws_ecr_repository" "lab9_image_repo" {
+  name = "lab9_image_repo"
 }
